@@ -4,7 +4,7 @@ import React, {useEffect} from 'react'
 
 function App() {
   useEffect(() => {
-    document.addEventListener('mousemove', customCursorDelay);
+    document.addEventListener('mousemove', customCursorDelay());
   }, []);
 
   function customCursor(event) {
