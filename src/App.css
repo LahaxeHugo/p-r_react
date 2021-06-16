@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+.nocursor {
+  /* cursor:none; */
+}
+
+body {
+  min-height: 150vh;
+  margin: 0;
+}
+
+#customcursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 80px;
+  background-image: url("img/cursor.png");
+  background-size: contain;
+}
