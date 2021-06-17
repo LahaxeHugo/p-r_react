@@ -1,7 +1,7 @@
 import logo from '../img/logo.svg';
 import '../css/App.css';
 
-import React, {useEffect} from 'react'
+import React from 'react'
 import Canvas from './Canvas'
 
 function App() {
