@@ -1,4 +1,4 @@
-import '../css/App.css';
+import '../scss/App.scss';
 
 import React, { useState, useEffect } from 'react'
 import Canvas from './Canvas'
@@ -79,8 +79,9 @@ function App() {
     }
 
     fetch('https://appcompet.herokuapp.com/getform', params)
-      .then(function(response) {
-        console.log(response);
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
       })
   }
 
