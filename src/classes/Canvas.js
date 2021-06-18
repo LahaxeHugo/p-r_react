@@ -89,6 +89,7 @@ class Canvas extends React.Component {
           const green = 0;
           const blue = Math.floor(210 + (210 * lifePercent));
           ctx.strokeStyle = `rgb(${red},${green},${blue}`;
+          ctx.strokeStyle = 'rgb(0,0,0)';
 
           ctx.beginPath();
 
