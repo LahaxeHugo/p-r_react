@@ -9,7 +9,7 @@ import Cursor from './type/Cursor'
  function Slide({ row, updateData, formData, active, index }) {
     let html = ''
     switch(row.type) {
-        case 'Cursor':
+        case 'cursor':
             html = <Cursor row={row} updateData={updateData} />
             break
         case 'select':
