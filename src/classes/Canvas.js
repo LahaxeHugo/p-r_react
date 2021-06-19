@@ -85,11 +85,10 @@ class Canvas extends React.Component {
           ctx.lineWidth = spreadRate;
 
           // As time increases decrease r and b, increase g to go from purple to green.
-          const red = Math.floor(190 - (190 * lifePercent));
-          const green = 0;
-          const blue = Math.floor(210 + (210 * lifePercent));
+          const red = Math.floor(56 - (56 * lifePercent));
+          const green = Math.floor(90 + (90 * lifePercent));
+          const blue = Math.floor(56 + (56 * lifePercent));
           ctx.strokeStyle = `rgb(${red},${green},${blue}`;
-          ctx.strokeStyle = 'rgb(0,0,0)';
 
           ctx.beginPath();
 

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import BottomControls from './BottomControls'
-import SideControls from './SideControls'
+import Controls from './controls/Controls'
 import Slide from './Slide'
 
 function Slider({ data, formData, updateData }) {
@@ -17,17 +16,15 @@ function Slider({ data, formData, updateData }) {
 
     let slides = data.map((row, index) => {
         let active = index === current
-        return <Slide row={row} updateData={updateData} formData={formData} key={index} active={active} />
+        return <Slide row={row} updateData={updateData} formData={formData} key={index} active={active} index={index+1} />
     })
 
     return (
         <div className="Slider">
             <div className="slides">
-                {slides}
-                {/* <Slide row={data[current]} updateData={updateData} formData={formData} /> */}
+                {slides}    
             </div>
-            <SideControls updateSlide1={updateSlide1} />
-            <BottomControls data={data} current={current} updateSlide2={setCurrent} />
+            <Controls data={data} current={current} updateSlide1={updateSlide1} updateSlide2={setCurrent} />
         </div>
     )
 }
