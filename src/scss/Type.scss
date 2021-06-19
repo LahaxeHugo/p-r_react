@@ -1,0 +1,68 @@
+.Select {
+    border: unset;
+    border-bottom: 2px solid $colorGreen;
+    background: unset;
+    color: $colorGreen;
+    box-shadow: unset;
+    font-size: 16px;
+    padding: 0 50px 5px 0;
+    cursor: pointer;
+
+    &:active, &:focus {
+        outline: none;
+    }
+}
+
+.Radios, .Checkboxs {
+    display: flex;
+    flex-direction: column;
+
+    .Radio, .Checkbox {
+        border: 1px solid $colorGreen;
+        width: 300px;
+        min-height: 70px;
+        margin: 0 10px;
+        color: $colorGreen;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        padding-left: 40px;
+        margin-bottom: 10px;
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: $colorGreen;
+        }
+
+        &.Checkbox {
+            &::after {
+                border-radius: 0;
+                border: 1px solid $colorGreen;
+                background-color: unset;
+                border-radius: 2px;
+            }
+        }
+
+        &.selected {
+            background-color: $colorGreen;
+            color: $colorWhite;
+
+            &::after {
+                background-color: $colorWhite;
+            }
+        }
+
+        input {
+            display: none;
+        }
+    }
+}
