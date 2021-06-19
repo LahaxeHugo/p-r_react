@@ -6,6 +6,11 @@ function Dot({ id_question, option, index , updateData, updateCursor}) {
             e.target.children[0].click()
         }
     }
+    function clickInput2(e) {
+        if(e.target.classList.contains('dot')) {
+            e.target.parentNode.children[0].click()
+        }
+    }
 
     return (
         <div className="Dot" onClick={clickInput}>
@@ -19,7 +24,7 @@ function Dot({ id_question, option, index , updateData, updateCursor}) {
                 onChange={e => {updateData('cursor', e);}}
                 onClick={updateCursor}
             />
-            <div className="dot"></div>
+            <div className="dot" onClick={clickInput2}></div>
             <label htmlFor={'dot-'+id_question+'-'+index}>{option.name}</label>
         </div>
     )
