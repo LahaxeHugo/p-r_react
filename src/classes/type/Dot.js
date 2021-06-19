@@ -10,7 +10,7 @@ function Dot({ id_question, option, index , updateData, updateCursor}) {
     return (
         <div className="Dot" onClick={clickInput}>
             <input 
-                type="dot"
+                type="radio"
                 name={'dot-'+id_question}
                 id={'dot-'+id_question+'-'+index}
                 className="option type-dot" 

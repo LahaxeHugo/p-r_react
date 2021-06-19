@@ -88,7 +88,7 @@ function App() {
     {
       name: 'Combien êtes-vous dans votre domicile ?',
       type: 'select',
-      id_question: 4,
+      id_question: 5,
       options: [
         {
           id_option: 1,
@@ -115,7 +115,7 @@ function App() {
   function updateData(type, e) {
     console.log(type);
     if(e.target.value !== undefined || e.target.checked !== undefined) {
-      let data = new Object(formData)
+      let data = {...formData}
       let id_question = parseInt(e.target.getAttribute('data-id_question'))
       let id_option = parseInt(e.target.getAttribute('data-id_option'))
       switch(type) {
@@ -170,7 +170,7 @@ function App() {
     <div className="App">
       <Canvas />
       <Slider data={data} formData={formData} updateData={updateData} />
-      {/* <button onClick={submitData}>Send</button> */}
+      <button className="submitData" onClick={submitData}>Send</button>
     </div>
   );
 }
