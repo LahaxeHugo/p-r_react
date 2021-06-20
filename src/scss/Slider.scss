@@ -80,15 +80,10 @@
             position: absolute;
             top: 0;
             left: 0;
-            // visibility: hidden;
-            // opacity: 0;
             transition: all 1s;
-            // left: 100%;
 
             &.active {
                 left: 0;
-                // visibility: visible;
-                // opacity: 1;
             }
 
             h2 {
@@ -113,6 +108,58 @@
             .wrapper-field {
                 display: flex;
                 justify-content: center;
+            }
+        }
+
+        .SlideEnd {
+            .email-wrapper {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                font-size: 18px;
+                margin-top: 25px;
+
+                
+                label {
+                    position: absolute;
+                    color: rgba($colorGreen, 0.7);
+                    cursor: pointer;
+                    transition: all .3s;
+                    top: 0;
+                }
+                &.active {
+                    label {
+                        top: -25px;
+                    }
+                }
+                
+                input {
+                    border: unset;
+                    border-bottom: 2px solid $colorGreen;
+                    background: unset;
+                    color: $colorGreen;
+                    box-shadow: unset;
+                    font-size: 18px;
+                    padding: 0 50px 5px 0;
+                    cursor: pointer;
+    
+                    &:active, &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .submitData {
+                color: $colorWhite;
+                background-color: $colorGreen;
+                width: 120px;
+                text-align: center;
+                padding: 10px 0;
+                border-radius: 30px/20px;
+                font-weight: bold;
+                font-size: 20px;
+                cursor: pointer;
+                margin-top: 50px;
             }
         }
     }

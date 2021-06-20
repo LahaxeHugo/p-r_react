@@ -6,7 +6,7 @@ import Select from './type/Select'
 import Radios from './type/Radios'
 import Cursor from './type/Cursor'
 
- function Slide({ row, updateData, formData, active, index }) {
+ function Slide({ row, updateData, index }) {
     let html = ''
     switch(row.type) {
         case 'cursor':
@@ -27,10 +27,9 @@ import Cursor from './type/Cursor'
 
     }
 
-    let a = active ? ' active' : ''
 
     return (
-         <div className={'Slide'+a} style={{left: ((index-1)*100) + '%'}}>
+         <div className="Slide" style={{left: ((index-1)*100) + '%'}}>
              <h2>Question <span className="number">{index}</span></h2>
              <h3>{row.name}</h3>
              <div className="wrapper-field">{html}</div>

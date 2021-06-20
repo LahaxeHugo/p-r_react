@@ -186,8 +186,7 @@ function App() {
     <div className="App">
       <Header avis={avis} />
       <Canvas />
-      <Slider data={data} formData={formData} updateData={updateData} />
-      <button className="submitData" onClick={submitData}>Send</button>
+      <Slider data={data} formData={formData} updateData={updateData} submitData={submitData} />
     </div>
   );
 }
