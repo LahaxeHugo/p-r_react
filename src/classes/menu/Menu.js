@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import MenuProfile from './MenuProfile'
 
 function Menu({ data, closeMenu }) {
