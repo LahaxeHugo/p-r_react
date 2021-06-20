@@ -1,6 +1,7 @@
 import '../scss/App.scss';
 
 import React, { useState } from 'react'
+import Header from './Header'
 import Canvas from './Canvas'
 import Slider from './Slider'
 
@@ -110,6 +111,21 @@ function App() {
     }
   ]
 
+  let avis = [
+    {
+      question: 'Vos repas de la semaine cuisinés chez vous en une fois par nos chefs',
+      response: 'Wow c’est génial ! J’ai adoré que miguel vienne chez moi pour tout me préparer.',
+      name: 'Justine',
+      sub: 'Membre depuis 3mois'
+    },
+    {
+      question: 'Une deuxième question aléatoire',
+      response: 'J’adore ! Je recommande à tout le monde !',
+      name: 'Charlotte',
+      sub: 'Membre depuis 6ans'
+    }
+  ]
+
   let [formData, setFormData] = useState({})
 
   function updateData(type, e) {
@@ -168,6 +184,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header avis={avis} />
       <Canvas />
       <Slider data={data} formData={formData} updateData={updateData} />
       <button className="submitData" onClick={submitData}>Send</button>
