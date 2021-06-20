@@ -67,15 +67,28 @@
 
 
     .slides {
+        position: relative;
+        transition: all 1s;
+
         .Slide {
             justify-content: center;
             align-items: center;
             flex-direction: column;
             min-height: 100vh;
-            display: none;
+            width: 100%;
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            // visibility: hidden;
+            // opacity: 0;
+            transition: all 1s;
+            // left: 100%;
 
             &.active {
-                display: flex;
+                left: 0;
+                // visibility: visible;
+                // opacity: 1;
             }
 
             h2 {

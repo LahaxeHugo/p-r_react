@@ -21,7 +21,7 @@ function Slider({ data, formData, updateData }) {
 
     return (
         <div className="Slider">
-            <div className="slides">
+            <div className="slides" style={{left: -((current)*100) + '%'}}>
                 {slides}    
             </div>
             <Controls data={data} current={current} updateSlide1={updateSlide1} updateSlide2={setCurrent} />

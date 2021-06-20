@@ -30,7 +30,7 @@ import Cursor from './type/Cursor'
     let a = active ? ' active' : ''
 
     return (
-         <div className={'Slide'+a}>
+         <div className={'Slide'+a} style={{left: ((index-1)*100) + '%'}}>
              <h2>Question <span className="number">{index}</span></h2>
              <h3>{row.name}</h3>
              <div className="wrapper-field">{html}</div>
