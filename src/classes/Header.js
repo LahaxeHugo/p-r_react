@@ -10,7 +10,7 @@ function Header({ avis }) {
     
     function toggleMenu() {
         setActive(!active)
-        if(active === true) {
+        if(active !== true) {
             setData(avis[Math.floor(Math.random() * avis.length)])
         }
     }

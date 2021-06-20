@@ -129,7 +129,7 @@ function App() {
   let [formData, setFormData] = useState({})
 
   function updateData(type, e) {
-    console.log(type);
+    // console.log(type);
     if(e.target.value !== undefined || e.target.checked !== undefined) {
       let data = {...formData}
       let id_question = parseInt(e.target.getAttribute('data-id_question'))
@@ -163,7 +163,7 @@ function App() {
           default:
             data[id_question] = e.target.value
         }
-        console.log(data);
+        // console.log(data);
         setFormData(data)
     }
   }
