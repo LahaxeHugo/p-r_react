@@ -1,8 +1,10 @@
 import React from 'react'
 
-function RightControl({ updateSlide1 }) {
+function RightControl({ updateSlide1, hidden }) {
+    let h = hidden ? ' hidden' : ''
+
     return (
-        <div className="element right" onClick={() => {updateSlide1('right')}}>Suivant</div>
+        <div className={'element right'+h} onClick={() => {updateSlide1('right')}}>Suivant</div>
     )
 }
 

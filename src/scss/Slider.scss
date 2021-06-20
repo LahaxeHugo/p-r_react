@@ -52,6 +52,9 @@
             font-weight: bold;
             font-size: 20px;
             cursor: pointer;
+            visibility: visible;
+            opacity: 1;
+            transition: all .5s;
 
             &.left {
                 margin-right: 80px;
@@ -61,6 +64,11 @@
                 margin-left: 80px;
                 background-color: $colorGreen;
                 color: $colorWhite;
+            }
+
+            &.hidden {
+                visibility: hidden;
+                opacity: 0;
             }
         }
     }
