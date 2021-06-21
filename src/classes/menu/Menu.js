@@ -4,7 +4,7 @@ import MenuProfile from './MenuProfile'
 function Menu({ data, closeMenu }) {
     return(
         <>
-            <div className="Menu-overlay" onClick={closeMenu}></div>
+            {/* <div className="Menu-overlay" onClick={closeMenu}></div> */}
             <div className="Menu">
                 <div className="Menu-sub">
                     <p className="Menu-question">{data.question}</p>

@@ -127,6 +127,7 @@ function App() {
   ]
 
   let [formData, setFormData] = useState({})
+  let [menuActive, setMenuActive] = useState(false)
 
   function updateData(type, e) {
     // console.log(type);
@@ -181,10 +182,12 @@ function App() {
       })
   }
 
+  
+  let ma = menuActive ? ' menu-open' : ''
 
   return (
-    <div className="App">
-      <Header avis={avis} />
+    <div className={'App'+ma}>
+      <Header avis={avis} menuActive={menuActive} setMenuActive={setMenuActive} />
       <Canvas />
       <Slider data={data} formData={formData} updateData={updateData} submitData={submitData} />
     </div>

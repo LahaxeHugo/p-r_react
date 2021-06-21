@@ -3,25 +3,22 @@ import Menu from './menu/Menu'
 import Logo from './menu/Logo'
 import MenuButton from './menu/MenuButton'
 
-function Header({ avis }) {
-    let [active, setActive] = useState(false)
+function Header({ avis, menuActive, setMenuActive }) {
     let [data, setData] = useState(avis[0])
     
-    
     function toggleMenu() {
-        setActive(!active)
-        if(active !== true) {
+        setMenuActive(!menuActive)
+        if(menuActive !== true) {
             setData(avis[Math.floor(Math.random() * avis.length)])
         }
     }
+
     function closeMenu() {
-        setActive(false)
+        setMenuActive(false)
     }
 
-    let a = active ? ' active' : ''
-
     return(
-        <header className={'Header'+a}>
+        <header className="Header">
             <Logo />
             <MenuButton toggleMenu={toggleMenu} />
             <Menu data={data} closeMenu={closeMenu} />

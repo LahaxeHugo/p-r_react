@@ -122,35 +122,43 @@
             }
         }
     }
+}
+
+.App {
+    &.menu-open {
+        .Header {
+            .Logo {
+                * {
+                    fill: $colorWhite;
+                }
+            }
     
-    &.active {
-        .Logo {
-            * {
-                fill: $colorWhite;
+            .MenuButton {
+                transform: translateX(60px);
+                > div {
+                    background-color: $colorWhite;
+    
+                    &:nth-child(1) {
+                        transform: rotate(45deg) translate(2px, 8px);
+                    }
+                    &:nth-child(2) {
+                        transform: rotate(-45deg) translate(2px, -8px);
+                    }
+                }
+            }
+    
+            .Menu-overlay {
+                visibility: visible;
+                opacity: 1;
+            }
+    
+            .Menu {
+                left: 0;
             }
         }
 
-        .MenuButton {
-            transform: translateX(70px);
-            > div {
-                background-color: $colorWhite;
-
-                &:nth-child(1) {
-                    transform: rotate(45deg) translate(2px, 8px);
-                }
-                &:nth-child(2) {
-                    transform: rotate(-45deg) translate(2px, -8px);
-                }
-            }
-        }
-
-        .Menu-overlay {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .Menu {
-            left: 0;
+        .Slider {
+            width: calc(100% - 350px);
         }
     }
 }
