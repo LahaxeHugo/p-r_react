@@ -65,13 +65,16 @@
         max-width: 100vw;
         z-index: 1;
         transition: all .5s;
+        overflow: hidden;
+        padding-right: 20px;
+        box-sizing: border-box;
 
         .Menu-bckg {
             background-color: $colorGreen;
             position: absolute;
             width: 120%;
             height: 120%;
-            left: -20%;
+            left: -23%;
             top: -10%;
             transform: rotate(-1deg);
         }
@@ -189,7 +192,7 @@
 
         @media (min-width: 767px) {
             .Slider {
-                width: calc(100% - 350px);
+                width: calc(100% - 450px);
             }
         }
     }
