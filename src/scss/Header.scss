@@ -6,6 +6,8 @@
     display: flex;
     align-items: center;
     z-index: 2;
+    width: 450px;
+    max-width: 100vw;
 
     .Logo {
         z-index: 100;
@@ -23,15 +25,23 @@
         cursor: pointer;
         z-index: 2;
         transition: all .3s;
-        transition-delay: .1s;
+        transition-delay: .25s;
+        position: absolute;
+        margin-left: 200px;
         
         > div {
-            height: 4px;
-            width: 40px;
+            height: 2px;
             background-color: $colorGreen;
             border-radius: 2px;
             transition: all .3s;
             transition-delay: .1s;
+
+            &:first-child {
+                width: 50px;
+            }
+            &:last-child {
+                width: 30px;
+            }
         }
     }
 
@@ -49,14 +59,25 @@
     .Menu {
         position: absolute;
         top: 0;
-        left: -350px;
+        left: -480px;
         height: 100vh;
-        width: 350px;
-        background-color: $colorGreen;
+        width: 450px;
+        max-width: 100vw;
         z-index: 1;
-        transition: all .3s;
+        transition: all .5s;
+
+        .Menu-bckg {
+            background-color: $colorGreen;
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            left: -20%;
+            top: -10%;
+            transform: rotate(-1deg);
+        }
         
         .Menu-sub {
+            position: relative;
             padding: 150px 30px 50px;
             height: calc(100vh - 200px);
             display: flex;
@@ -132,11 +153,20 @@
                     fill: $colorWhite;
                 }
             }
+
+            .Menu-bckg {
+                animation: .5s menuOpen ease-in-out;
+                animation-delay: .3s;
+            }
     
             .MenuButton {
-                transform: translateX(60px);
+                transform: translateX(70px);
+                @media (min-width: 767px) {
+                    transform: translateX(150px);
+                }
                 > div {
                     background-color: $colorWhite;
+                    width: 40px;
     
                     &:nth-child(1) {
                         transform: rotate(45deg) translate(2px, 8px);
@@ -157,8 +187,22 @@
             }
         }
 
-        .Slider {
-            width: calc(100% - 350px);
+        @media (min-width: 767px) {
+            .Slider {
+                width: calc(100% - 350px);
+            }
         }
+    }
+}
+
+@keyframes menuOpen {
+    0% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-1deg);
     }
 }

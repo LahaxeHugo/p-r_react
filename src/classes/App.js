@@ -127,7 +127,7 @@ function App() {
   ]
 
   let [formData, setFormData] = useState({})
-  let [menuActive, setMenuActive] = useState(false)
+  let [menuActive, setMenuActive] = useState(window.innerWidth < 767 ? false : true)
 
   function updateData(type, e) {
     // console.log(type);

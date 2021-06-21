@@ -6,6 +6,7 @@ function Menu({ data, closeMenu }) {
         <>
             {/* <div className="Menu-overlay" onClick={closeMenu}></div> */}
             <div className="Menu">
+                <div className="Menu-bckg"></div>
                 <div className="Menu-sub">
                     <p className="Menu-question">{data.question}</p>
                     <div className="Menu-bottom">
