@@ -79,7 +79,7 @@ class Canvas extends React.Component {
 
           // As the lifetime goes on, lifePercent goes from 0 to 1.
           const lifePercent = (point.lifetime / duration);
-          const spreadRate = 7 * (1 - lifePercent);
+          const spreadRate = 1 * (1 - lifePercent);
 
           ctx.lineJoin = 'round';
           ctx.lineWidth = spreadRate;
