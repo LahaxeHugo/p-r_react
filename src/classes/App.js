@@ -116,7 +116,7 @@ function App() {
 
   let [formData, setFormData] = useState({})
   let [menuActive, setMenuActive] = useState(false) //window.innerWidth < 767 ? false : true
-  let [token, setToken] = useState(uuid())
+  let [token] = useState(uuid())
 
   function updateData(type, e) {
     console.log(token);

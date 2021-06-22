@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Controls from './controls/Controls'
 import Slide from './Slide'
-import SlideEnd from './SlideEnd'
+// import SlideEnd from './SlideEnd'
 
 function Slider({ data, formData, updateData, submitData }) {
     let [current, setCurrent] = useState(0)
