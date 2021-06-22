@@ -67,7 +67,7 @@
                 margin-right: 80px;
             }
             
-            &.right {
+            &.right, &.submit {
                 margin-left: 80px;
                 background-image: url("../img/button-full.svg");
                 color: $colorWhite;
@@ -76,6 +76,7 @@
             &.hidden {
                 visibility: hidden;
                 opacity: 0;
+                width: 0;
             }
         }
     }

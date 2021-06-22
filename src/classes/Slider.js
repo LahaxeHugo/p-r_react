@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Controls from './controls/Controls'
 import Slide from './Slide'
-// import SlideEnd from './SlideEnd'
+// import Sligit deEnd from './SlideEnd'
 
 function Slider({ data, formData, updateData, submitData }) {
     let [current, setCurrent] = useState(0)
@@ -24,6 +24,7 @@ function Slider({ data, formData, updateData, submitData }) {
     }
 
     function updateSlide2(to) {
+        console.log(current);
         if(to > current) {
             let empty = []
             for (let i = current; i < to; i++) {
@@ -38,6 +39,20 @@ function Slider({ data, formData, updateData, submitData }) {
             }
         } else {
             setCurrent(to)
+        }
+    }
+
+    function submit() {
+        let empty = []
+        for(let i = 0; i < data.length; i++) {
+            if(!verifyInput(data[i], formData)) {
+                empty.push(i+1)
+            }
+        }
+        if(empty.length > 0) {
+            alert('Remplir les questions : '+empty.join(', '))
+        } else {
+            submitData()
         }
     }
 
@@ -83,7 +98,7 @@ function Slider({ data, formData, updateData, submitData }) {
                 {slides}
                 {/* <SlideEnd index={slides.length} submitData={submitData} /> */}
             </div>
-            <Controls data={data} current={current} updateSlide1={updateSlide1} updateSlide2={updateSlide2} />
+            <Controls data={data} current={current} updateSlide1={updateSlide1} updateSlide2={updateSlide2} submit={submit} />
         </div>
     )
 }

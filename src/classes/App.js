@@ -117,9 +117,9 @@ function App() {
   let [formData, setFormData] = useState({})
   let [menuActive, setMenuActive] = useState(false) //window.innerWidth < 767 ? false : true
   let [token] = useState(uuid())
+  let [answer, setAnswer] = useState(false)
 
   function updateData(type, e) {
-    console.log(token);
     // console.log(type);
     if(e.target.value !== undefined || e.target.checked !== undefined) {
       let data = {...formData}
@@ -169,7 +169,10 @@ function App() {
   function submitData() {
     let params = {
       method: 'POST',
-      body: JSON.stringify(formData)
+      body: JSON.stringify({
+        'token' : token,
+        'data' : formData
+      })
     }
 
     fetch('https://appcompet.herokuapp.com/getform', params)
@@ -177,19 +180,29 @@ function App() {
       .then(data => {
         console.log(data);
       })
+      setAnswer(true)
   }
 
   
-  let ma = menuActive ? ' menu-open' : ''
   
-  return (
-    <div className={'App'+ma}>
-      <Intro />
-      <Header avis={avis} menuActive={menuActive} setMenuActive={setMenuActive} />
-      <Canvas />
-      <Slider data={data} formData={formData} updateData={updateData} submitData={submitData} />
-    </div>
-  );
+  if(answer) {
+    return (
+      <div className="App">
+          answer
+      </div>
+    )
+  } else {
+    let ma = menuActive ? ' menu-open' : ''
+
+    return (
+      <div className={'App'+ma}>
+        <Intro />
+        <Header avis={avis} menuActive={menuActive} setMenuActive={setMenuActive} />
+        <Canvas />
+        <Slider data={data} formData={formData} updateData={updateData} submitData={submitData} />
+      </div>
+    )
+  }
 }
 
 export default App
