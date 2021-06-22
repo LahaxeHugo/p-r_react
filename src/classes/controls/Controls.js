@@ -8,7 +8,7 @@ function Controls({ data, current, updateSlide1, updateSlide2 }) {
     let rightHidden = false
 
     if(current === 0) leftHidden = true
-    if(current === data.length) rightHidden = true
+    if(current === data.length-1) rightHidden = true
 
 
     return (

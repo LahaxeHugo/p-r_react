@@ -13,12 +13,12 @@ function Slider({ data, formData, updateData, submitData }) {
         else if(type === 'right') {
             if(current < data.length) {
                 if(verifyInput(data[current], formData)) {
-                    if((current + 1) < (data.length+1)) setCurrent(parseInt(current + 1))
+                    if((current + 1) < (data.length)) setCurrent(parseInt(current + 1))
                 } else {
                     alert('Remplir la question')
                 }
             } else {
-                if((current + 1) < (data.length+1)) setCurrent(parseInt(current + 1))
+                if((current + 1) < (data.length)) setCurrent(parseInt(current + 1))
             }
         }
     }
@@ -81,7 +81,7 @@ function Slider({ data, formData, updateData, submitData }) {
         <div className="Slider">
             <div className="slides" style={{left: -((current)*100) + '%'}}>
                 {slides}
-                <SlideEnd index={slides.length} submitData={submitData} />
+                {/* <SlideEnd index={slides.length} submitData={submitData} /> */}
             </div>
             <Controls data={data} current={current} updateSlide1={updateSlide1} updateSlide2={updateSlide2} />
         </div>

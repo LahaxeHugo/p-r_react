@@ -16,7 +16,10 @@ function Intro() {
                 <h2>De bons petits plats, <br />le casse-tête en moins !</h2>
                 <p className="text-1">Le choix des repas, la sélection des ingrédients, la cuisine, le ménage...  Toutes ces activités peuvent prendre beaucoup de temps dans votre foyer.</p>
                 <p className="text-2">Apprenez-en plus sur vos habitudes et découvrez <b>comment libérer du temps</b> pour ce qui compte vraiment, sans négliger votre alimentation.</p>
-                <div className="button" onClick={hide}>DÉCOUVRIR</div>
+                <div className="Intro-footer">
+                    <div className="button" onClick={hide}>DÉCOUVRIR</div>
+                    <div className="arrow"></div>
+                </div>
             </div>
             <div className="Intro-right"></div>
         </div>

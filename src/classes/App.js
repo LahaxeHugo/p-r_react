@@ -115,6 +115,8 @@ function App() {
 
   let [formData, setFormData] = useState({})
   let [menuActive, setMenuActive] = useState(false) //window.innerWidth < 767 ? false : true
+  
+
 
   function updateData(type, e) {
     // console.log(type);
@@ -178,7 +180,7 @@ function App() {
 
   
   let ma = menuActive ? ' menu-open' : ''
-
+  
   return (
     <div className={'App'+ma}>
       <Intro />
