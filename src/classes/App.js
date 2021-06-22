@@ -1,6 +1,7 @@
 import '../scss/App.scss';
 
 import React, { useState } from 'react'
+import uuid from 'react-uuid'
 import Header from './Header'
 import Canvas from './Canvas'
 import Slider from './Slider'
@@ -115,10 +116,10 @@ function App() {
 
   let [formData, setFormData] = useState({})
   let [menuActive, setMenuActive] = useState(false) //window.innerWidth < 767 ? false : true
-  
-
+  let [token, setToken] = useState(uuid())
 
   function updateData(type, e) {
+    console.log(token);
     // console.log(type);
     if(e.target.value !== undefined || e.target.checked !== undefined) {
       let data = {...formData}
