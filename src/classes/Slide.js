@@ -5,6 +5,7 @@ import Checkboxs from './type/Checkboxs'
 import Select from './type/Select'
 import Radios from './type/Radios'
 import Cursor from './type/Cursor'
+import Text2 from './type/Text2'
 
  function Slide({ row, updateData, index }) {
     let html = ''
@@ -20,6 +21,9 @@ import Cursor from './type/Cursor'
             break
         case 'radio':
             html = <Radios row={row} updateData={updateData} />
+            break;
+        case 'text2':
+            html = <Text2 row={row} updateData={updateData} /> 
             break;
         case 'text':
         default:

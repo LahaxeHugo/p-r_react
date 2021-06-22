@@ -9,6 +9,21 @@ import Intro from './Intro'
 function App() {
   let data = [
     {
+      name: 'Combien êtes-vous dans votre domicile ?',
+      type: 'text2',
+      id_question: 5,
+      options: [
+        {
+          id_option: 1,
+          name: 'Adultes'
+        },
+        {
+          id_option: 2,
+          name: 'Enfants'
+        }
+      ]
+    },
+    {
       name: 'Quel est votre ressenti sur la qualité de vos ingrédients',
       type: 'cursor',
       id_question: 8,
@@ -59,12 +74,6 @@ function App() {
       ]
     },
     {
-      name: 'Nooon ?',
-      type: 'text',
-      id_question: 3,
-      options: []
-    },
-    {
       name: 'Choix facile',
       type: 'checkbox',
       id_question: 4,
@@ -84,29 +93,6 @@ function App() {
         {
           id_option: 4,
           name: 'Option 4'
-        },
-      ]
-    },
-    {
-      name: 'Combien êtes-vous dans votre domicile ?',
-      type: 'select',
-      id_question: 5,
-      options: [
-        {
-          id_option: 1,
-          name: 'Nombre d\'adultes'
-        },
-        {
-          id_option: 2,
-          name: '1'
-        },
-        {
-          id_option: 3,
-          name: '2'
-        },
-        {
-          id_option: 4,
-          name: '3'
         },
       ]
     }
@@ -137,6 +123,13 @@ function App() {
       let id_question = parseInt(e.target.getAttribute('data-id_question'))
       let id_option = parseInt(e.target.getAttribute('data-id_option'))
       switch(type) {
+        case 'text2':
+          if(!data[id_question]) {
+            data[id_question] = {}
+            data[id_question]['options'] = {}
+          }
+          data[id_question]['options'][id_option] = parseInt(e.target.value)
+          break
           case 'select':
             if(!data[id_question]) {
               data[id_question] = {}

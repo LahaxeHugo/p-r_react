@@ -14,13 +14,14 @@
     &.active {
         visibility: visible;
         opacity: 1;
-    }
-
-    + .Header {
-        .MenuButton {
-            display: none;
+        
+        + .Header {
+            .MenuButton {
+                display: none;
+            }
         }
     }
+
 
     .Intro-left {
         display: flex;

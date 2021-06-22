@@ -12,8 +12,7 @@ function Slider({ data, formData, updateData, submitData }) {
         }
         else if(type === 'right') {
             if(current < data.length) {
-                let id_question = data[current].id_question
-                if(verifyInput(id_question, formData)) {
+                if(verifyInput(data[current], formData)) {
                     if((current + 1) < (data.length+1)) setCurrent(parseInt(current + 1))
                 } else {
                     alert('Remplir la question')
@@ -28,8 +27,7 @@ function Slider({ data, formData, updateData, submitData }) {
         if(to > current) {
             let empty = []
             for (let i = current; i < to; i++) {
-                let id_question = data[i].id_question
-                if(!verifyInput(id_question, formData)) {
+                if(!verifyInput(data[i], formData)) {
                     empty.push(i+1)
                 }
             }
@@ -47,15 +45,26 @@ function Slider({ data, formData, updateData, submitData }) {
         return <Slide row={row} updateData={updateData} formData={formData} key={index} index={index+1} />
     })
 
-    function verifyInput(id_question, formData) {
+    function verifyInput(data, formData) {
+        let id_question = data.id_question
+
         if(formData[id_question]) {
             if(formData[id_question].options) {
-                let count = 0
-                for(let option in formData[id_question].options) {
-                    if(formData[id_question].options[option] === true) count++
-                }
-                if(count === 0) {
-                    return false
+                if(data.type === 'text2') {
+                    let max = data.options.length
+                    let count = 0
+                    for(let option in formData[id_question].options) {
+                        if(!isNaN(formData[id_question].options[option])) count++
+                    }
+                    if(count !== max) return false
+                } else {
+                    let count = 0
+                    for(let option in formData[id_question].options) {
+                        if(formData[id_question].options[option] === true) count++
+                    }
+                    if(count === 0) {
+                        return false
+                    }
                 }
             } else {
                 if(formData[id_question].length === 0) {
