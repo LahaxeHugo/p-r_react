@@ -13,7 +13,7 @@ function App() {
   
   useEffect(() => {
     let params = {}
-    fetch('https://appcompet.herokuapp.com/getQuest', params)
+    fetch('https://proxy-ail.herokuapp.com/https://appcompet.herokuapp.com/getQuest', params)
       .then(res => res.json())
       .then(d => {
         setData(d)
@@ -97,7 +97,7 @@ function App() {
       })
     }
 
-    fetch('https://appcompet.herokuapp.com/postform', params)
+    fetch('https://proxy-ail.herokuapp.com/https://appcompet.herokuapp.com/postform', params)
       .then(res => res.json())
       .then(data => {
         console.log(data);
