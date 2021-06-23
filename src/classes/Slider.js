@@ -24,7 +24,6 @@ function Slider({ data, formData, updateData, submitData }) {
     }
 
     function updateSlide2(to) {
-        console.log(current);
         if(to > current) {
             let empty = []
             for (let i = current; i < to; i++) {

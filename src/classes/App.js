@@ -16,7 +16,7 @@ function App() {
       .then(res => res.json())
       .then(d => {
         setData(d)
-        // console.log(d);
+        console.log(d);
       })
   }, [])
 

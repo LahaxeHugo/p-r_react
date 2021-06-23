@@ -46,9 +46,9 @@
         }
 
         > .element {
-            color: $colorGreen;
             // border: 1px solid $colorGreen;
             // border-radius: 30px/20px;
+            color: $colorGreen;
             background-image: url("../img/button-empty.svg");
             background-size: contain;
             background-repeat: no-repeat;
