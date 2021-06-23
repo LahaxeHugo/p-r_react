@@ -127,6 +127,9 @@
 
         .Intro-right {
             background-position: bottom center;
+            > div {
+                background-position: bottom center;
+            }
         }
     }
 }
