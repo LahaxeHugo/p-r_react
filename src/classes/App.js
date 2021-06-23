@@ -12,9 +12,7 @@ function App() {
   let [data, setData] = useState([])
   
   useEffect(() => {
-    let params = {
-      guard: 'request-no-cors'
-    }
+    let params = {}
     fetch('https://appcompet.herokuapp.com/getQuest', params)
       .then(res => res.json())
       .then(d => {
@@ -95,8 +93,7 @@ function App() {
       method: 'POST',
       body: JSON.stringify({
         'token' : token,
-        'data' : formData,
-        guard: 'request-no-cors'
+        'data' : formData
       })
     }
 
