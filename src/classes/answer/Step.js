@@ -16,8 +16,10 @@ function Step({ row, index }) {
                 <div className={'image-'+index}></div>
             </div>
             <div className="right-column">
-                <p className="number">{index}</p>
-                <h4>{row.title}</h4>
+                <div className="tt">
+                    <p className="number">{index}</p>
+                    <h4>{row.title}</h4>
+                </div>
                 <div className="options">
                     {options}
                 </div>

@@ -274,8 +274,193 @@
         }
     }
 
+    .Subscribe {
+        display: flex;
+        background-color: $colorGreen;
+
+        .left {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .image {
+                height: 120%;
+                width: 80%;
+                background-color: red;
+            }
+        }
+        .right {
+            width: 50%;
+            padding: 0 30px;
+            box-sizing: border-box;
+            height: 300px;
+
+            h3 {
+                color: $colorWhite;
+                font-size: 26px;
+                font-weight: 300;
+                text-align: left;
+                margin-bottom: 40px;
+            }
+
+            .right-bottom {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+
+                .button {
+                    background-color: white;
+                    padding: 10px;
+                    margin: 0 20px;
+                }
+
+                .text {
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    font-size: 18px;
+                    margin: 0 20px;
+                    margin-top: 25px;
+                    margin-bottom: 20px;
+    
+                    
+                    label {
+                        position: absolute;
+                        color: rgba($colorWhite, 0.7);
+                        cursor: pointer;
+                        transition: all .3s;
+                        top: 0;
+                    }
+                    &.active {
+                        label {
+                            top: -25px;
+                        }
+                    }
+                    
+                    input {
+                        border: unset;
+                        border-bottom: 2px solid $colorWhite;
+                        background: unset;
+                        color: $colorWhite;
+                        box-shadow: unset;
+                        font-size: 18px;
+                        padding: 0 0 5px 0;
+                        min-width: 250px;
+                        width: 100%;
+                        cursor: pointer;
+    
+                        &:active, &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .slogan {
+        width: 400px;
+        max-width: 100%;
+        height: 200px;
+        margin: 80px auto;
+        background-color: red;
+    }
+
+    .Footer {
+        width: 100%;
+        background-color: $colorGreen;
+        color: $colorWhite;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        p {
+            margin: 0;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            .column {
+                width: 300px;
+                margin: 0 20px;
+
+                .title {
+                    font-family: DaretroMandra;
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+
+                .list {
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        text-decoration: none;
+                        color: rgba($colorWhite, 0.7);
+                        margin-bottom: 3px;
+                    }
+                }
+            }
+        }
+
+        .rs {
+            p {
+                text-align: center;
+                font-style: italic;
+                color: rgba($colorWhite, 0.7);
+                margin-bottom: 20px;
+            }
+
+            .list {
+                display: flex;
+                justify-content: center;
+
+                > div {
+                    width: 40px;
+                    height: 40px;
+                    margin: 0 10px;
+                    background-color: red;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .bottom {
+            display: flex;
+            margin: auto;
+            max-width: 1000px;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            p {
+                width: 200px;
+                text-align: center;
+            }
+
+        }
+    }
+
+
     @media (max-width: 767px) {
+        h1 {
+            font-size: 80px;
+        }
+        
+        .Section1 {
+            .ii {
+                padding: 0 20px;
+            }
+        }
+
+        
         .Section2 {
+            h3 {
+                font-size: 20px;
+                padding: 0 10px;
+            }
             .steps {
                 .Step {
                     flex-direction: column !important;
@@ -285,7 +470,69 @@
 
                     .right-column {
                         margin-top: 50px;
+
+                        .tt {
+                            display: flex;
+                            margin-bottom: 25px;
+
+                            .number {
+                                margin-right: 20px;
+                                top: -20px;
+                                margin-bottom: -20px;
+                            }
+
+                            h4 {
+                                font-size: 18px;
+                                margin-bottom: 0;
+                            }
+                        }
                     }
+                }
+            }
+        }
+
+        .Subscribe {
+            margin-top: 140px;
+            flex-direction: column;
+            align-items: center;
+            height: 450px;
+            position: relative;
+            justify-content: flex-end;
+
+            .right {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+
+            .left {
+                width: 80%;
+                height: 200px;
+                position: absolute;
+                top: -100px;
+
+                .image {
+                    height: 100%;
+                }
+            }
+        }
+
+        .Footer {
+            .menu {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+
+                .column {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .bottom {
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                    margin-top: 10px;
                 }
             }
         }
