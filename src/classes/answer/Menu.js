@@ -7,24 +7,24 @@ function Menu() {
             <div className="nav">
                 <div className="nav-left">
                     <div className="nav-item">
-                        <a href="#">AU MENU</a>
+                        <a href="https://p-r-react.vercel.app/">AU MENU</a>
                     </div>
                     <div className="nav-item">
-                        <a href="#">OFFRIR</a>
+                        <a href="https://p-r-react.vercel.app/">OFFRIR</a>
                     </div>
                     <div className="nav-item">
-                        <a href="#">CONCEPT</a>
+                        <a href="https://p-r-react.vercel.app/">CONCEPT</a>
                     </div>
                 </div>
                 <div className="nav-right">
                     <div className="nav-item">
-                        <a href="#">QUESTIONS</a>
+                        <a href="https://p-r-react.vercel.app/">QUESTIONS</a>
                     </div>
                     <div className="nav-item">
-                        <a href="#">CONNEXION</a>
+                        <a href="https://p-r-react.vercel.app/">CONNEXION</a>
                     </div>
                     <div className="nav-item">
-                        <a href="#">INSCRIPTION</a>
+                        <a href="https://p-r-react.vercel.app/">INSCRIPTION</a>
                     </div>
                 </div>
             </div>
