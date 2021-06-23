@@ -10,9 +10,12 @@ import Answer from './answer/Answer'
 
 function App() {
   let [data, setData] = useState([])
-
+  
   useEffect(() => {
-    fetch('https://appcompet.herokuapp.com/getQuest')
+    let params = {
+      guard: 'request-no-cors'
+    }
+    fetch('https://appcompet.herokuapp.com/getQuest', params)
       .then(res => res.json())
       .then(d => {
         setData(d)
@@ -92,7 +95,8 @@ function App() {
       method: 'POST',
       body: JSON.stringify({
         'token' : token,
-        'data' : formData
+        'data' : formData,
+        guard: 'request-no-cors'
       })
     }
 
