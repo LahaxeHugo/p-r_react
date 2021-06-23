@@ -143,6 +143,40 @@
         margin-top: 10px;
         cursor: pointer;
     }
+
+    @media (max-width: 767px) {
+        &::before {
+            width: calc(100% - 50px);
+            margin: 0 30px;
+        }
+        
+        .Dot {
+            width: 60px;
+
+            .dot {
+                border: 1px solid $colorGreen;
+                background-color: $colorWhite;
+                z-index: 1;
+                &::after {
+                    display: none;
+                }
+            }
+            label {
+                z-index: 2;
+                position: absolute;
+                margin-top: 7px;
+            }
+
+            &.selected {
+                .dot {
+                    background-color: $colorGreen;
+                }
+                label {
+                    color: $colorWhite;
+                }
+            }
+        }
+    }
 }
 
 .Text2 {
