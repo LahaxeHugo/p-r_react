@@ -19,18 +19,23 @@
 
     .Radio, .Checkbox {
         border: 1px solid $colorGreen;
-        width: 300px;
+        width: 400px;
         min-height: 70px;
         margin: 0 10px;
         color: $colorGreen;
         display: flex;
         align-items: center;
         font-size: 16px;
-        padding-left: 40px;
+        padding: 0 40px;
         margin-bottom: 10px;
         position: relative;
         cursor: pointer;
         box-sizing: border-box;
+
+        @media (max-width: 767px) {
+            width: 300px;
+            padding-left: 20px;
+        }
 
         &::before {
             content: "";
@@ -151,6 +156,7 @@
         font-size: 18px;
         margin: 0 20px;
         margin-top: 25px;
+        margin-bottom: 20px;
 
         
         label {

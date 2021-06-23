@@ -1,103 +1,24 @@
 import '../scss/App.scss';
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import uuid from 'react-uuid'
 import Header from './Header'
 import Canvas from './Canvas'
 import Slider from './Slider'
 import Intro from './Intro'
+import Answer from './answer/Answer'
 
 function App() {
-  let data = [
-    {
-      name: 'Combien êtes-vous dans votre domicile ?',
-      type: 'text2',
-      id_question: 5,
-      options: [
-        {
-          id_option: 1,
-          name: 'Adultes'
-        },
-        {
-          id_option: 2,
-          name: 'Enfants'
-        }
-      ]
-    },
-    {
-      name: 'Quel est votre ressenti sur la qualité de vos ingrédients',
-      type: 'cursor',
-      id_question: 8,
-      options: [
-        {
-          id_option: 1,
-          name: 'Très mauvais'
-        },
-        {
-          id_option: 2,
-          name: 'Mauvais'
-        },
-        {
-          id_option: 3,
-          name: 'Médiocre'
-        },
-        {
-          id_option: 4,
-          name: 'Bon'
-        },
-        {
-          id_option: 5,
-          name: 'Très bon'
-        },
-        {
-          id_option: 6,
-          name: 'Excellent'
-        }
-      ]
-    },
-    {
-      name: 'Vous êtes plutôt...',
-      type: 'radio',
-      id_question: 1,
-      options: [
-        {
-          id_option: 1,
-          name: 'Chocolat'
-        },
-        {
-          id_option: 2,
-          name: 'Fraise'
-        },
-        {
-          id_option: 3,
-          name: 'Vanille'
-        }
-      ]
-    },
-    {
-      name: 'Choix facile',
-      type: 'checkbox',
-      id_question: 4,
-      options: [
-        {
-          id_option: 1,
-          name: 'Option 1'
-        },
-        {
-          id_option: 2,
-          name: 'Option 2'
-        },
-        {
-          id_option: 3,
-          name: 'Option 3'
-        },
-        {
-          id_option: 4,
-          name: 'Option 4'
-        },
-      ]
-    }
-  ]
+  let [data, setData] = useState([])
+
+  useEffect(() => {
+    fetch('https://appcompet.herokuapp.com/getQuest')
+      .then(res => res.json())
+      .then(d => {
+        setData(d)
+        // console.log(d);
+      })
+  }, [])
 
   let avis = [
     {
@@ -175,20 +96,18 @@ function App() {
       })
     }
 
-    fetch('https://appcompet.herokuapp.com/getform', params)
+    fetch('https://appcompet.herokuapp.com/postform', params)
       .then(res => res.json())
       .then(data => {
         console.log(data);
       })
       setAnswer(true)
   }
-
-  
   
   if(answer) {
     return (
       <div className="App">
-          answer
+          <Answer />
       </div>
     )
   } else {
