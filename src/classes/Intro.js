@@ -21,7 +21,9 @@ function Intro() {
                     <div className="arrow"></div>
                 </div>
             </div>
-            <div className="Intro-right"></div>
+            <div className="Intro-right">
+                <div></div>
+            </div>
         </div>
     )
 }

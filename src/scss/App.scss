@@ -2,6 +2,7 @@ $colorGreen: #385a38;
 $colorOrange: #f3b13a;
 $colorBlack: #181818;
 $colorWhite: #FFF;
+$colorBrown: #59554B;
 
 @import "font";
 @import "Slider";
@@ -19,6 +20,10 @@ body {
   margin: 0;
   overflow-x: hidden;
   // background-color: #282c34;
+}
+
+p {
+  color: $colorBrown;
 }
 
 .trail {

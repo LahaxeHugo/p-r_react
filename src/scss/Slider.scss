@@ -48,16 +48,18 @@
         > .element {
             // border: 1px solid $colorGreen;
             // border-radius: 30px/20px;
-            color: $colorGreen;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba($colorGreen, 0.7);
             background-image: url("../img/button-empty.svg");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            width: 140px;
+            width: 150px;
             text-align: center;
-            padding: 10px 0;
+            padding: 18px 0;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 16px;
             cursor: pointer;
             visibility: visible;
             opacity: 1;
@@ -70,12 +72,12 @@
             &.right {
                 margin-left: 80px;
                 background-image: url("../img/button-full.svg");
-                color: $colorWhite;
+                color: $colorWhite !important;
             }
             
             &.submit {
                 background-image: url("../img/button-full.svg");
-                color: $colorWhite;
+                color: $colorWhite !important;
             }
 
             &.hidden {
@@ -92,7 +94,6 @@
         transition: all 1s;
 
         .Slide {
-            justify-content: center;
             align-items: center;
             flex-direction: column;
             min-height: 100vh;
@@ -113,6 +114,9 @@
                 display: flex;
                 align-items: center;
                 margin-bottom: 0;
+                color: $colorGreen;
+                margin-top: 140px;
+
                 .number {
                     font-family: Leonetta;
                     font-size: 80px;
@@ -123,7 +127,8 @@
             }
 
             h3 {
-                font-size: 32px;
+                font-size: 44px;
+                max-width: 600px;
                 font-family: DaretroMandra;
                 color: $colorGreen;
                 font-weight: 400;
@@ -209,7 +214,6 @@
                 border: 1px solid $colorGreen;
                 padding: 0;
                 background-size: 30%;
-
                 
                 span {
                     display: none;

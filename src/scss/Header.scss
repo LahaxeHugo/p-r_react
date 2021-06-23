@@ -3,6 +3,7 @@
     top: 0;
     left: 0;
     padding: 20px;
+    padding-left: 40px;
     display: flex;
     align-items: center;
     z-index: 2;
@@ -30,9 +31,9 @@
         margin-left: 200px;
         
         > div {
-            height: 2px;
+            height: 1px;
             background-color: $colorGreen;
-            border-radius: 2px;
+            border-radius: 1px;
             transition: all .3s;
             transition-delay: .1s;
 
@@ -90,7 +91,7 @@
 
         .Menu-question {
             font-size: 28px;
-            text-transform: uppercase;
+            // text-transform: uppercase;
             color: rgba($colorWhite, .7);
             font-family: RedHatMedium;
         }
@@ -110,12 +111,15 @@
         }
         
         .Menu-symbol-2 {
-            height: 10px;
-            background-image: url("../img/symbol-2.svg");
-            background-size: 60%;
-            background-repeat: no-repeat;
+            height: 1px;
+            border-radius: 2px;
+            width: 100%;
+            background-color: $colorWhite;
+            // background-image: url("../img/symbol-2.svg");
+            // background-size: 60%;
+            // background-repeat: no-repeat;
             margin-top: 26px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .MenuProfile {
@@ -165,7 +169,7 @@
             .MenuButton {
                 transform: translateX(70px);
                 @media (min-width: 767px) {
-                    transform: translateX(150px);
+                    transform: translateX(130px);
                 }
                 > div {
                     background-color: $colorWhite;

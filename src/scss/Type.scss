@@ -1,6 +1,6 @@
 .Select {
     border: unset;
-    border-bottom: 2px solid $colorGreen;
+    border-bottom: 1px solid $colorGreen;
     background: unset;
     color: $colorGreen;
     box-shadow: unset;
@@ -129,7 +129,7 @@
         content: "";
         position: absolute;
         width: calc(100% - 100px);
-        height: 2px;
+        height: 1px;
         background-color: $colorGreen;
         top: 16px;
         margin: 0 50px;
@@ -174,7 +174,7 @@
         
         input {
             border: unset;
-            border-bottom: 2px solid $colorGreen;
+            border-bottom: 1px solid $colorGreen;
             background: unset;
             color: $colorGreen;
             box-shadow: unset;
