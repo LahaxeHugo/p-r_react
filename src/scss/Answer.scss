@@ -519,10 +519,12 @@
         .Footer {
             .menu {
                 flex-direction: column;
-                text-align: center;
                 align-items: center;
 
                 .column {
+                    box-sizing: border-box;
+                    padding: 0 10px;
+                    margin: 0;
                     margin-bottom: 30px;
                 }
             }
