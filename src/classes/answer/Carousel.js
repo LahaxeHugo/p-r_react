@@ -15,12 +15,12 @@ function Carousel() {
 
     let controls = data.map((row, i) => {
         let active = position === i ? ' selected' : ''
-        return <div className={'element'+active} onClick={e => {update(e, i)}}></div>
+        return <div key={i} className={'element'+active} onClick={e => {update(e, i)}}></div>
     })
 
     let slides = data.map((row, i) => {
         return (
-            <div className={'slide slide-'+(i+1)} style={{left: (i*100) + '%'}}>
+            <div key={i} className={'slide slide-'+(i+1)} style={{left: (i*100) + '%'}}>
                 <p>{row}</p>
             </div>
         )

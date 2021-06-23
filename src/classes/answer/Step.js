@@ -3,8 +3,8 @@ import React from 'react'
 function Step({ row, index }) {
     let options = row.options.map((option, i) => {
         return (
-            <div className="option">
-                <div className={'option-'+index+'-'+(i+1)}></div>
+            <div className="option" key={i}>
+                <div className={'opt option-'+index+'-'+(i+1)}></div>
                 <p>{option}</p>
             </div>
         )
@@ -18,7 +18,9 @@ function Step({ row, index }) {
             <div className="right-column">
                 <p className="number">{index}</p>
                 <h4>{row.title}</h4>
-                {options}
+                <div className="options">
+                    {options}
+                </div>
             </div>
         </div>
     )

@@ -1,4 +1,44 @@
 .Answer {
+    margin-top: 120px;
+
+    .Menu {
+        background-color: white;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        padding: 10px 40px;
+        box-sizing: border-box;
+        z-index: 10;
+        
+        .logo {
+            width: 150px;
+            height: 70px;
+            background-color: red;
+        }
+        .nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            
+            .nav-left, .nav-right {
+                display: flex;
+
+                .nav-item {
+                    margin: 0 20px;
+                    display: flex;
+                    align-items: center;
+
+                    a {
+                        color: $colorGreen;
+                        text-decoration: none;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
     h2 {
         font-size: 16px;
         color: rgba($colorGreen, .7);
@@ -6,11 +46,12 @@
     }
 
     h1 {
-        font-size: 80px;
+        font-size: 120px;
         color: $colorGreen;
         text-align: center;
         font-family: DaretroMandra;
-        margin-top: 0;
+        margin-bottom: 0;
+        margin-top: 24px;
     }
 
     .info-box {
@@ -112,6 +153,8 @@
                     bottom: 60px;
                     left: 50%;
                     transform: translateX(-50%);
+                    width: 90%;
+                    text-align: center;
                 }
             }
         }
@@ -135,16 +178,16 @@
                 border: 1px solid transparent;
     
                 &.selected {
-                    border: 1px solid rgba($colorGreen, 0.7);
+                    border: 1px solid rgba($colorWhite, 0.7);
     
                     &::before {
-                        background-color: $colorGreen;
+                        background-color: $colorWhite;
                     }
                 }
     
                 &::before {
                     content: "";
-                    background-color: rgba($colorGreen, 0.7);
+                    background-color: rgba($colorWhite, 0.7);
                     width: 8px;
                     height: 8px;
                     border-radius: 50%;
@@ -159,6 +202,92 @@
         h3 {
             max-width: 1000px;
             margin: auto;
+            margin-bottom: 50px;
+            font-size: 32px;
+        }
+
+        .steps {
+            max-width: 1200px;
+            margin: auto;
+
+            .Step {
+                display: flex;
+                margin-bottom: 70px;
+
+                &:nth-child(2n+2) {
+                    flex-direction: row-reverse;
+                }
+
+                .left-column {
+                    width: 50%;
+                    padding: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    box-sizing: border-box;
+
+                    > div {
+                        width: 100%;
+                        height: 350px;
+                        background-color: red;
+                    }
+                }
+
+                .right-column {
+                    width: 50%;
+                    padding: 0 10px;
+                    box-sizing: border-box;
+
+                    .number {
+                        font-family: Leonetta;
+                        font-size: 64px;
+                        margin: 0;
+                        position: relative;
+                        top: -40px;
+                        margin-bottom: -40px;
+                    }
+
+                    h4 {
+                        margin-top: 0;
+                        color: $colorGreen;
+                        font-size: 20px;
+                        text-transform: uppercase;
+                    }
+
+                    .options {
+                        .option {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .opt {
+                                width: 32px;
+                                height: 32px;
+                                background-color: red;
+                            }
+                            p {
+                                width: calc(100% - 50px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .Section2 {
+            .steps {
+                .Step {
+                    flex-direction: column !important;
+                    .left-column, .right-column {
+                        width: 100%;
+                    }
+
+                    .right-column {
+                        margin-top: 50px;
+                    }
+                }
+            }
         }
     }
 }

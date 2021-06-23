@@ -14,7 +14,7 @@ function Section2() {
         {
             title: 'Votre chef s’occupe de sélectionner les meilleurs ingrédients',
             options: [
-                'Vous méritez le meilleur dans votre assiette. Nous avons développé un réseau de producteurs partenaires pour vous fournir des produits labellisés .',
+                'Vous méritez le meilleur dans votre assiette. Nous avons développé un réseau de producteurs partenaires pour vous fournir des produits labellisés.',
                 'Au final, des petits plats fait-maison et ultra-frais avec des ingrédients de qualité.'
             ]
         },
@@ -37,7 +37,7 @@ function Section2() {
     ]
 
     let steps = data.map((row,index) => {
-        return <Step row={row}  index={index+1} />
+        return <Step key={index} row={row}  index={index+1} />
     })
 
     return(
