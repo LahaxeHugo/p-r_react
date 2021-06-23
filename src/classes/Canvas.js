@@ -21,7 +21,7 @@ class Canvas extends React.Component {
   componentDidMount = () => {
     // Set height and width on load because if set in state body isn't defined yet.
     this.setState({
-      cHeight: window.innerHeight,
+      cHeight: document.body.clientHeight,
       cWidth: document.body.clientWidth,
     });
 
@@ -29,7 +29,7 @@ class Canvas extends React.Component {
       'resize',
       () => {
         this.setState({
-          cHeight: window.innerHeight,
+          cHeight: document.body.clientHeight,
           cWidth: document.body.clientWidth,
         });
       },
