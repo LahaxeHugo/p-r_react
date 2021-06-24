@@ -1,4 +1,4 @@
-import React from 'react'
+import { React } from 'react'
 
 import Text from './type/Text'
 import Checkboxs from './type/Checkboxs'
@@ -31,9 +31,8 @@ import Text2 from './type/Text2'
 
     }
 
-
     return (
-         <div className="Slide" style={{left: ((index-1)*100) + '%'}}>
+         <div className="Slide" id={'Slide-'+index} style={{left: ((index-1)*100) + '%'}}>
              <h2>Question <span className="number">{index}</span></h2>
              <h3>{row.name}</h3>
              <div className="wrapper-field">{html}</div>

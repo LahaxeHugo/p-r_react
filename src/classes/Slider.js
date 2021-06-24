@@ -91,8 +91,9 @@ function Slider({ data, formData, updateData, submitData }) {
         return true
     }
 
+
     return (
-        <div className="Slider">
+        <div className="Slider" id="Slider">
             <div className="slides" style={{left: -((current)*100) + '%'}}>
                 {slides}
                 {/* <SlideEnd index={slides.length} submitData={submitData} /> */}

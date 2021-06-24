@@ -3,11 +3,11 @@ import Radio from './Radio'
 
 function Radios({ row, updateData }) {
     function updateRadios(e) {
-        let parents = e.target.parentNode.parentNode.children
+        let parents = e.target.parentNode.parentNode.parentNode.children
         for(let parent of parents) {
             parent.classList.remove('selected')
         }
-        e.target.parentNode.classList.add('selected')
+        e.target.parentNode.parentNode.classList.add('selected')
     }
 
     let radios = row.options.map((option, index) => {

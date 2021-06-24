@@ -1,5 +1,7 @@
 .Slider {
     min-height: 100vh;
+    // min-height: calc(100vh - 150px);
+    // padding-bottom: 150px;
     position: relative;
     transition: all .3s;
     width: 100%;
@@ -7,7 +9,7 @@
 
     .Controls {
         position: absolute;
-        bottom: 40px;
+        bottom: 20px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -92,14 +94,21 @@
     .slides {
         position: relative;
         transition: all 1s;
+        // min-height: 100vh;
+
+        // overflow: auto;
+        // white-space: nowrap;
 
         .Slide {
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-            width: 100%;
+            // display: inline-block;
+
             display: flex;
             position: absolute;
+            min-height: 100vh;
+
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
             top: 0;
             left: 0;
             transition: all 1s;
@@ -115,7 +124,7 @@
                 align-items: center;
                 margin-bottom: 0;
                 color: $colorGreen;
-                margin-top: 140px;
+                margin-top: 100px;
 
                 .number {
                     font-family: Leonetta;
@@ -127,8 +136,8 @@
             }
 
             h3 {
-                font-size: 44px;
-                max-width: 600px;
+                font-size: 40px;
+                // max-width: 600px;
                 font-family: DaretroMandra;
                 color: $colorGreen;
                 font-weight: 400;
@@ -139,6 +148,7 @@
             .wrapper-field {
                 display: flex;
                 justify-content: center;
+                // margin-bottom: 120px;
             }
         }
 
@@ -200,7 +210,7 @@
         .slides {
             .Slide {
                 h2 {
-                    margin-top: 110px;
+                    margin-top: 100px;
                 }
                 h3 {
                     font-size: 22px;
