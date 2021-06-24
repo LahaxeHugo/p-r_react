@@ -5,8 +5,8 @@ function Carousel() {
 
     let data = [
         'Profiter d’un concert',
-        'Slide2',
-        'Slide3'
+        'Faire de l’escalade',
+        'Faire du jardinage'
     ]
 
     function update(e, i) {
