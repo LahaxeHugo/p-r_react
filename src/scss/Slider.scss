@@ -101,6 +101,24 @@
         // white-space: nowrap;
 
         .Slide {
+            background-repeat: no-repeat;
+            &#Slide-1 {
+                background-image: url("../img/bg/bg1.png");
+            }
+            &#Slide-2 {
+                background-image: url("../img/bg/bg2.png");
+            }
+            &#Slide-3 {
+                background-image: url("../img/bg/bg3.png");
+            }
+            &#Slide-4 {
+                background-image: url("../img/bg/bg4.png");
+            }
+            &#Slide-5 {
+                background-image: url("../img/bg/bg5.png");
+            }
+
+
             // display: inline-block;
 
             display: flex;
