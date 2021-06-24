@@ -29,6 +29,7 @@ function Section1({ formData }) {
             case 20:
               points += 4
               break
+            default:
           }
         }
       }
