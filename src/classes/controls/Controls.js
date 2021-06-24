@@ -19,7 +19,7 @@ function Controls({ data, current, updateSlide1, updateSlide2, submit }) {
     return (
         <div className="Controls">
             <LeftControl updateSlide1={updateSlide1} hidden={leftHidden} />
-            <BottomControls data={data} current={current} updateSlide2={updateSlide2} />
+            <BottomControls data={data} current={current} updateSlide2={updateSlide2} hidden={rightHidden} />
             <RightControl updateSlide1={updateSlide1} hidden={rightHidden}/>
             {s}
         </div>
