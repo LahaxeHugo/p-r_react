@@ -5,11 +5,11 @@ import Section2 from './Section2'
 import Subscribe from './Subscribe'
 import Footer from './Footer'
 
-function Answer() {
+function Answer({ formData }) {
     return (
         <div className="Answer">
             <Menu />
-            <Section1 />
+            <Section1 formData={formData} />
             <Section2 />
             <Subscribe />
             <div className="slogan"></div>

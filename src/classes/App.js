@@ -17,7 +17,6 @@ function App() {
       .then(res => res.json())
       .then(d => {
         setData(d)
-        console.log(d);
       })
   }, [])
 
@@ -99,8 +98,8 @@ function App() {
 
     fetch('https://proxy-ail.herokuapp.com/https://appcompet.herokuapp.com/postform', params)
       .then(res => res.json())
-      .then(data => {
-        console.log(data);
+      .then(d => {
+        console.log(d);
       })
       setAnswer(true)
   }
@@ -108,7 +107,7 @@ function App() {
   if(answer) {
     return (
       <div className="App">
-          <Answer />
+          <Answer formData ={formData} />
       </div>
     )
   } else {
