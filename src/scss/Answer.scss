@@ -149,9 +149,9 @@
       height: 100%;
       position: relative;
       transition: all 0.5s;
-      .slide-1 {
+
+      .slide {
         position: absolute;
-        background-image: url("../img/answer/slider/slider-pic1.png");
         width: 100%;
         height: 100%;
         background-size: cover;
@@ -170,50 +170,16 @@
           width: 90%;
           text-align: center;
         }
+      }
+
+      .slide-1 {
+        background-image: url("../img/answer/slider/slider-pic1.png");
       }
       .slide-2 {
-        position: absolute;
         background-image: url("../img/answer/slider/slider-pic2.png");
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        p {
-          margin: 0;
-          text-transform: uppercase;
-          color: $colorWhite;
-          font-weight: bold;
-          font-size: 24px;
-          position: absolute;
-          bottom: 60px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 90%;
-          text-align: center;
-        }
       }
       .slide-3 {
-        position: absolute;
-        width: 100%;
-        height: 100%;
         background-image: url("../img/answer/slider/slider-pic3.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        p {
-          margin: 0;
-          text-transform: uppercase;
-          color: $colorWhite;
-          font-weight: bold;
-          font-size: 24px;
-          position: absolute;
-          bottom: 60px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 90%;
-          text-align: center;
-        }
       }
     }
 

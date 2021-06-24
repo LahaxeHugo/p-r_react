@@ -15,7 +15,6 @@ function Controls({ data, current, updateSlide1, updateSlide2, submit }) {
         s = <SubmitControl submit={submit} />
     }
 
-
     return (
         <div className="Controls">
             <LeftControl updateSlide1={updateSlide1} hidden={leftHidden} />
