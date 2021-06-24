@@ -43,10 +43,10 @@ function Footer() {
             <div className="rs">
                 <p>Rejoignez-nous !</p>
                 <div className="list">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div className="face"></div>
+                    <div className="insta"></div>
+                    <div className="link"></div>
+                    <div className="pint"></div>
                 </div>
             </div>
             <div className="bottom">
